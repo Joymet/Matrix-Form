@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>💀 1Nf3CT3D ☣</title>
+  <link rel="stylesheet" type="text/css" href="css/target.css">
+</head>
+<body>
+  
+
+  <center>
+    <section class = "form-register">
+      <div class="container mt-1">
+        <h2>Ë̸̡̧͉͖̯̟̪̘́̀̎͑͑̎̃̈́̚͝R̷̜̠̽R̸̗̺̱̭̜͓͉͗̐̍͂̎̓̕͠O̶͍̯͙̔̏̃͛̇̔R̶̨̦͓͖̒́̍̈́̂͂̉͠ A̶͂͠C̶̈͝C̷͒́E̸͚̾S̷̈́̇O̵̸̊̌̀̕ D̵̀̅E̴̿̾N̵͘̕E̴̐G̵̈́̄A̶̚D̵̑̆Ȯ̸̋</h2>
+      </div>
+      <div class="container">
+
+        <H2>ÇêRrÄñÐð þåGïñåå</H2>
+        
+        <h1>₳ⱠɆⱤ₮₳</h1>
+
+        <H2>₵ɆⱤⱤ₳₦ĐØ ₱₳₲ł₦₳₳</H2>
+
+        <h1>卂ㄥ乇尺ㄒ卂</h1>
+        
+        <H2>匚ⓔℝ𝓡卂𝐧ⓓⓞ 卩𝐀Ꮆ𝓲ηＡ𝕒</H2>
+
+        <h1>卂ㄥ乇尺ㄒ卂</h1>
+        
+        <div class="temporizador" id="temporizador">
+        <h1>00:10</h1>
+        </div>
+
+
+        <script>
+          var segundos = 10;
+          var temporizador = document.getElementById("temporizador");
+          function actualizarTemporizador() {
+            segundos--;
+            temporizador.textContent = "00:" + (segundos < 10 ? "0" : "") + segundos;
+
+            if (segundos <= 0) {
+              clearInterval(intervalo);
+            }
+          }
+          actualizarTemporizador();
+          var intervalo = setInterval(actualizarTemporizador, 1000);
+        </script>
+    
+
+      </div>
+    </center>
+  </section>
+
+
+  
+  <pre id="asciiArt"></pre>
+  <canvas id="c"></canvas>
+
+
+<script src="js/target.js"></script>
+</body>
+</html>

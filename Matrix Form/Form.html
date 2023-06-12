@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐌𝓪𝓣гƗ𝐱</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+</head>
+
+<body>
+<canvas id="c"></canvas>
+
+<section class = "form-register">
+    <div class="container mt-1">
+        <center>
+        
+        <h2>𝔹𝕚𝕖𝕟𝕧𝕖𝕟𝕚𝕕𝕠 𝕒 𝕝𝕒 𝕄𝕒𝕥𝕣𝕚𝕩</h2>
+        </center>
+
+        <form action="target.html" method="post" onsubmit="return validar()">
+
+            <div class="row g-6">
+                <div class="col md-3">
+                    <input id="nombre" class="form-control" type="text" placeholder="ɪɴɢʀᴇꜱᴇ ꜱᴜ ɴᴏᴍʙʀᴇ ᴅᴇ ᴜꜱᴜᴀʀɪᴏ">
+                    <div id="err_nombre"></div>
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col md-3">
+                    <input id="contraseña" class="form-control" type="password" placeholder="ɪɴɢʀᴇꜱᴇ ꜱᴜ ᴄᴏɴᴛʀᴀꜱᴇñᴀ">
+                    <div id="err_contraseña"></div>
+                </div>
+
+                <div class="col md-3">
+                    <input id="conpass" class="form-control" type="password" placeholder="ᴄᴏɴꜰɪʀᴍᴇ ꜱᴜ ᴄᴏɴᴛʀᴀꜱᴇñᴀ">
+                    <div id="err_conpass"></div>
+                </div>
+            </div>
+            
+
+            <div class="row my-2">
+                <div class="col md-3">
+                    <input id="correo" class="form-control" type="text" placeholder="ɪɴɢʀᴇꜱᴇ ꜱᴜ ᴄᴏʀʀᴇᴏ">
+                    <div id="err_correo"></div>
+                </div>
+
+                <div class="col md-3">
+                    <input id="telefono" class="form-control" type="text" placeholder="ɪɴɢʀᴇꜱᴇ ꜱᴜ ᴛᴇʟᴇꜰᴏɴᴏ">
+                    <div id="err_telefono"></div>
+                </div>
+            </div>
+
+            
+
+
+            <div class="row g-3">
+
+                <div class="col md-3">
+                    <select class="form-select" aria-label="ꜱᴇʟᴇᴄᴄɪᴏɴᴇ ꜱᴜ ᴄᴏᴍᴜɴᴀ">
+                        <option value="" disabled selected>Seleccione Su comuna</option>
+                        <option value="1">Corral</option>
+                        <option value="2">Valdivia</option>
+                        <option value="3">Panguipulli</option>
+                    </select>
+                </div>
+
+                <div class="col md-3">
+                    <input id="direccion" class="form-control" type="text" placeholder="ɪɴɢʀᴇꜱᴇ ꜱᴜ ᴅɪʀᴇᴄᴄɪᴏɴ">
+                    <div id="err_direccion"></div>
+                </div>
+
+                <div class="col md-6">
+                    <input id="postal" class="form-control" type="text" placeholder="ɪɴɢʀᴇꜱᴇ ꜱᴜ ᴄᴏᴅɪɢᴏ ᴘᴏꜱᴛᴀʟ">
+                    <div id="err_postal"></div>
+                </div>
+
+            </div>
+
+
+            <div class="row md-3">
+                <div class="col my-3">
+                <input id="web" class="form-control" type="text" placeholder='ᴇᴊ:"ᴍᴀᴛʀɪxʀᴇꜱᴜʀʀᴇᴄᴄɪᴏɴᴇꜱ.ᴄᴏᴍ"'>
+                <div id="err_web"></div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="hobby">(Agrege una Aficion a la vez)</label>
+                <input typ="text" class="form-control" id="hobby" placeholder="ᴀɢʀᴇɢᴀ ᴛᴜꜱ ᴀꜰɪᴄᴄɪᴏɴᴇꜱ (ᴘᴀꜱᴀᴛɪᴇᴍᴘᴏꜱ)">
+                <button id="addHobby" class="btn btn-secondary mt-2">Agregar a mis Aficiones</button>   
+              <div id="err_hobby" class="text-danger"></div>
+              <ul id="hobbyList" class="list">
+              </ul>
+            </div>
+            
+            <center>
+              <div class ="row mt-3">
+                <input class="btn-neon" type="submit" value="L̵̘̪̫͍̣̣̮̙̰̋͐͊̾͝Į̴̝̪͂̋͆͊̿̓̂̂̐͝B̴̭͕̘̖̘̮͓̘̫̰̃̓̓̎̇̕E̴̗̋̿̑̇̀̀̿̐͌͒R̶̬̊̓̄̑Â̸̙̯͓̫͔͔͚̥͍̅̑̾̍̔̍̽̓ ̷͍̪̗͉͎̾̾̅̂̅̎̿͘T̴̠̪̲̜̖̤̦̈́̏͛͑̌͂͂́͘͜͜U̷̧͍͔̐̈́͊̇̌̓̉̊ ̵̣̻̯͉̖͓̮̯̣͆̌̿̌̄̇̋̓̕͝M̴̥̳͖̎͐͒͑̈́͝E̸̛͚̟͈͗̅̈́̿͘N̸̮̳̾̋̚͝T̸͕̘̖̻̯̼͇̤͌̍̈̄̿͌͘̕͝ͅḚ̵̲̦̹̗̰͐̃͒̉͑̽̓̔͘͠ͅ">
+            </div>
+        </center>
+                
+           
+            
+                <div class="col mt-3">
+                <input class="form-chek-input" type="checkbox" value="" id="check">
+                <label class="Form-check-label" for="FlexCheckDefault">
+                    ᴀᴄᴇᴘᴛᴏ ʟᴏꜱ ᴛᴇʀᴍɪɴᴏꜱ ʏ ᴄᴏɴᴄᴇᴄᴜᴇɴᴄɪᴀꜱ
+                </label>
+                <div id="err_check"></div>
+            </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
